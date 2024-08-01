@@ -1,2 +1,2 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>This is the habit tracker you've been loogking for.</h1>
+<h2>Go and <a href="/authentication">log</a> in to access all of the features!</h2>
