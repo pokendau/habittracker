@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { browserLocalPersistence, getAuth, setPersistence } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { API_KEY, APP_ID, PROJECT_ID } from "$env/static/private";
 
 const firebaseConfig = {
@@ -14,6 +15,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
+export const db = getFirestore(app)
 
 setPersistence(auth, browserLocalPersistence)
   .catch((error) => {
