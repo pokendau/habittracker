@@ -16,6 +16,6 @@ export const actions = {
     const currentUser = await signInWithEmailAndPassword(auth, email.toString(), password.toString())
     user.set(currentUser.user)
 
-    redirect(302, "/")
+    redirect(302, "/dashboard")
   }
 } satisfies Actions 

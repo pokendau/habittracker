@@ -23,6 +23,6 @@ export const actions = {
     await sendEmailVerification(currentUser);
     user.set(currentUser)
 
-    redirect(302, "/")
+    redirect(302, "/dashboard")
   }
 } satisfies Actions;
