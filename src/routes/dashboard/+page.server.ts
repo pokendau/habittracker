@@ -2,11 +2,7 @@ import type { Actions } from "@sveltejs/kit";
 import { db, auth } from "$lib/firebase";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import type { PageServerLoad } from "./$types";
-
-interface Doc {
-  uid: string,
-  name: string,
-}
+import type { Doc } from "$lib/customTypes";
 
 export const actions = {
   default: (async ({ request }) => {
@@ -15,7 +11,7 @@ export const actions = {
     try {
       await addDoc(collection(db, "trackers"), {
         name: data.get("name"),
-        habits: [],
+        habits: {},
         userId: auth.currentUser?.uid
       })
     } catch (error) {
